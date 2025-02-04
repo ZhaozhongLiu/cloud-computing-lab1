@@ -1,0 +1,9 @@
+services:
+  web:
+    ports:
+      - "3000:3000"
+    build:
+      dockerfile: Dockerfile
+      context: ./
+    volumes:
+      - .env.local:/app/.env.local
