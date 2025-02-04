@@ -8,7 +8,7 @@ COPY package*.json /src/
 
 # Install npm dependencies
 ENV NODE_ENV=production
-RUN npm ci --only=production
+RUN npm install --production
 
 # Bundle app source
 COPY . /src
