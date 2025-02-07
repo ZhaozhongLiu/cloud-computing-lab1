@@ -13,7 +13,7 @@ spec:
         app: cna-web
     spec:
       containers:
-        - image: maxsncaregistry.azurecr.io/cna-next-web
+        - image: maxsncaregistry.azurecr.io/cna-next-web 
           name: cna-next-web
           ports:
             - containerPort: 80
