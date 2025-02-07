@@ -1,0 +1,21 @@
+# deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cna-web
+spec:
+  selector: # Define the wrapping strategy
+    matchLabels: # Match all pods with the defined labels
+      app: cna-web # Labels follow the `name: value` template
+  template: # This is the template of the pod inside the deployment
+    metadata:
+      labels:
+        app: cna-web
+    spec:
+      containers:
+        - image: maxsncaregistry.azurecr.io/cna-next-web
+          name: cna-next-web
+          ports:
+            - containerPort: 80
+
+           
